@@ -1,0 +1,50 @@
+why python
+	created by Guido van Rossum in 1990,
+	python 3 release in 2008
+	
+	easy to use language
+	high focus on readability (all about indentation and not complex braces)
+		reduces developers time 
+	lots of libraries and framework
+
+command line
+	windows - 
+		called 'command prompt'
+		1)curr directory - 		cd
+		2)contents of directories - 	dir
+		3)change directories - 		cd/{dir name/path}
+		4)go back a directory - 	cd ..
+		5)clear screen - 		cls
+	linux/mac os -
+		it is called 'Terminal' in both systems
+		1)curr directory - 		pwd
+		2)contents of directories - 	ls
+		3)change directories - 		cd/{dir name/path}
+		4)go back a directory - 	cd ..	
+		5)clear screen - 		clear
+		
+--------------------
+numbers
+	power operations = 2 ** 3
+		
+
+python has 'Dynamic Typing' i.e. -> we can same variable with different datatypes in the code
+	x = 2 
+	x = "name"
+type() - to get datatype
+--------------------
+strings - single quote or double quotes.
+	ordered sequence.
+	indexing is used to find the position of a single character
+		indexing - starts at 0 and then 1,2,3,4...
+		reverse indexing - starts at 0 and then ....-4,-3,-2,-1
+			if string length is unknown and if the last characters is needed then we can say string[-1] .
+	slicing - grab substring - syntax -> [start:stop:step]
+			default step size  = 1
+
+string immutability
+	string chars cannot be reassigned, Ex. -> name = 'Advait', name[2] = 'w' is not supported by string.
+	
+	
+
+
