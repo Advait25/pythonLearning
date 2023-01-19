@@ -63,5 +63,26 @@ print(f'result is {result:10.4f}')
 print(f'result is {result:10.4f} for {name}')
 
 
+#Lists
+print('\n\n\nLISTS')
+my_list = [1,2,3,4]
+my_list3 = ['Advait',25,99.99]
+print(len(my_list))   #list length
+print(my_list[2])     #indexing
+print(my_list[-1])     #indexing
+print(my_list[1:])    #slicing
+my_list[2] = 'three'    #mutable string
+my_list2 = ['a','b','c','zzz']
+new_list =  my_list + my_list2 #concatination
+print(new_list)
+my_list.append(98.3)    #add new item to end of list
+print('post append {}'.format(my_list))
+print(new_list.pop())         #remove item at the end of the list by default i.e. index -1
+print('post pop {}'.format(my_list))
+print('pop 0 index {} refreshed list {}'.format(my_list.pop(0),my_list))  #pop item at specific index
 
-
+a = ['a','x','g','k','c']
+a.sort()
+print('post sort a = {}'.format(a))
+a.reverse()
+print('post reverse a = {}'.format(a))

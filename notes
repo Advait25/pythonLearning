@@ -41,9 +41,26 @@ strings - single quote or double quotes.
 			if string length is unknown and if the last characters is needed then we can say string[-1] .
 	slicing - grab substring - syntax -> [start:stop:step]
 			default step size  = 1
+	string formatting 
+		print .formating - print('your string {}'.format('workds/chars to be inserted'))
+		float formatting  - (value:width.precision f)
 
-string immutability
-	string chars cannot be reassigned, Ex. -> name = 'Advait', name[2] = 'w' is not supported by string.
+	string immutability
+		string chars cannot be reassigned, Ex. -> name = 'Advait', name[2] = 'w' is not supported by string.
+----------------------
+Lists-	ordered seq that hold different object types
+		can be nested
+		stored in [] and ',' to separate the objects
+		indexing/reverse indexing and slicing can be done same as strings.
+		we can concatinate lists together	
+		"vIMP - > Lists are Mutable unlike strings"	
+		append and pop
+		sort -  happens in the string , nothing is returned
+		reverse -  reversing the string
+
+---------------------
+'None' object - special python object, indicating no value. 
+				default return value of function if nothing to return
 	
 	
 
