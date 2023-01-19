@@ -130,5 +130,37 @@ print(f'get index of element -> {t2.index(3)}')                 #to get index of
 
 
 
+#SETS
+print('\n\n\nSETS')
+
+myset = set()     # creating set
+myset.add(1)   # add element to object
+print(f'set -> {myset}')
+myset.add(1)    #adding 1 again, but set will not allow it, after print we will see only one value
+print(f'after adding same object again , set -> {myset}')
+#best way to add objects in sets is to 
+#1.create a List and 
+l = [4,4,4,2,2,3,1,1,1,8,8,8,66,6]
+#2.cast it into sets.
+new_set = set(l)
+print(f'new set casted from list -> {new_set}')
+
+#Booleans
+print('\n\n\nBOOLEANS')
+b = True
+c = False
+print(f'type of b {b}')
+print(f'type of c {c}')
+#example
+print(f'1 < 3 = {1 < 3},1 == 2 = {1 == 2},5 > 8 = {5 > 8}')
+#None object
+b = None
+print(b)
+
+
+
+
+
+
 
 

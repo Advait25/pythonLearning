@@ -61,6 +61,8 @@ Lists-	ordered seq that hold different object types
 ---------------------
 'None' object - special python object, indicating no value. 
 				default return value of function if nothing to return
+				best use is when we want to have an variable but not want initialize it right away 
+					and do it later in the code, we can use 'None' so that python will not throw error
 --------------------
 
 Dictionary - {'key': 'value',...} pair, no idex location, retrived based on key
@@ -77,7 +79,13 @@ Tuple - are like lists but two differences
 		- main use - for data integraty -> when we want to pass the object in code and we don't them to change accidentaly
 ----------------------
 
+Sets - unordered collection of unique sets.
+	   there can only be one instance of object
+	   best way to add objects in sets is to create a List and cast it into sets.
 
+---------------------
+
+Boolenas -  operators which allow to convey or return a True or False value ()capitalise T and F)
 	
 	
 
