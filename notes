@@ -61,6 +61,23 @@ Lists-	ordered seq that hold different object types
 ---------------------
 'None' object - special python object, indicating no value. 
 				default return value of function if nothing to return
+--------------------
+
+Dictionary - {'key': 'value',...} pair, no idex location, retrived based on key
+			 key should be string
+			 cannot be sorted, unordered.
+			 use when we only want to retrive the object absed on key and not index
+			 dictionary can hold lot of different data types (int, float, string, list etc.)
+			 "vIMP - > Dictionaries are Mutable unlike strings"	
+-------------------
+
+Tuple - are like lists but two differences
+		'Immutable'
+		'() instead of  []'	
+		- main use - for data integraty -> when we want to pass the object in code and we don't them to change accidentaly
+----------------------
+
+
 	
 	
 
