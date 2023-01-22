@@ -158,6 +158,33 @@ b = None
 print(b)
 
 
+#File I/O
+print('\n\n\nFilesI/O')
+#old way to open file
+#f = open("sample.txt",'x')   #create text file, will throw error if file with similar name already exists
+f = open("sample.txt",'w+')    #create text file, will not throw error if file with similar name already exists, instead overrides the existing file
+f.write("hello all, this is sample file \ncreating sample file using python \nwriting sample text to the file.")
+f.close()           #close the file
+f = open("sample.txt",'r')  
+content = f.read()      #to read the file
+print(content)
+f.seek(0)
+print(f'{f.readlines()}')
+f.close()
+# new way
+with open('sample.txt', mode='r') as s :
+    content = s.read()
+    print(f'\n with "with" statement \t {content}')
+
+with open('sample.txt', mode='a') as s :        #append data
+    s.write('\nappending data to fourth line')
+
+with open('sample.txt', mode='r') as s :
+    content = s.read()
+    print(f'\n with "with" statement \t {content}')
+    
+
+
 
 
 

@@ -25,13 +25,16 @@ command line
 		
 --------------------
 numbers
+	python has various types of numbers like integer, float etc.
+	we can  perform all arithmatic oparation like  +, -, /(floor division), * etc
 	power operations = 2 ** 3
 		
-
+-------------------
 python has 'Dynamic Typing' i.e. -> we can same variable with different datatypes in the code
 	x = 2 
 	x = "name"
 type() - to get datatype
+-
 --------------------
 strings - single quote or double quotes.
 	ordered sequence.
@@ -86,7 +89,25 @@ Sets - unordered collection of unique sets.
 ---------------------
 
 Boolenas -  operators which allow to convey or return a True or False value ()capitalise T and F)
-	
-	
 
+--------------------
 
+File I/O
+	(#only for Jupyter Notebook, - > 1) type pwd in cell ->> to find working directory for jupyter notebook)
+	seek(0) - >  to get cursor to starting position
+	readline - > get list, where each element in teh list is a line
+	adding file location to open a file in a particular path
+		windows - C:\\Users\\Advait\\Documents\\Learning\\pythonLearning
+		linux/mac os - /UsersAdvait/Documents/Learning/pythonLearning
+	opening file in -
+		r - > read
+		w - > write (overwrites in case file already exits or create new in case not file exists)
+		a - > append to the file
+		r+ - > read + write (no overwriting)
+		w+ - > read + write (overwrites in case file already exits or create new in case not file exists)
+	'with' statement - > new way to open a file, any code withing 'with' block will use the variable defined
+						Example - > with open(file.txt) as F	
+										'f' will be used here onwards
+
+						*tip -  we don't have to worry about closing the file i.e. file.close() as 'with' will take care of that
+-----------------------

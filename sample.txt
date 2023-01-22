@@ -1,0 +1,4 @@
+hello all, this is sample file 
+creating sample file using python 
+writing sample text to the file.
+appending data to fourth line
