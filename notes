@@ -111,3 +111,17 @@ File I/O
 
 						*tip -  we don't have to worry about closing the file i.e. file.close() as 'with' will take care of that
 -----------------------
+
+Comparison operators
+	==  equal to   	imp examples for == operator
+		- 3.0 == 3 ->> true - python will not consider integer/float as long as value is same
+		- 'bye' == 'bye' ->> true , 'Bye' == 'bye' ->> false, '2' == 2 ->> false
+	!=  not equal to
+	> greater than
+	< less than
+	>= greater than equal to
+	<=less than equal to
+
+	to chain multiple comparison operator statements we can use logical operators in python
+	keywords 1) AND 2) OR 3) NOT 
+	-note** 1 < 2 > 0.5 works but logical operators provide more readable code

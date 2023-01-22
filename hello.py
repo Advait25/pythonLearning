@@ -182,7 +182,18 @@ with open('sample.txt', mode='a') as s :        #append data
 with open('sample.txt', mode='r') as s :
     content = s.read()
     print(f'\n with "with" statement \t {content}')
-    
+
+
+#Comparison operators
+print('\n\n\nCOMPARISON OPERATORS')
+print(f"{2 == 2}\t{2.0 == 2}\t{'2' == 2}\t{'bye' == 'bye'}\t{'Bye' == 'bye'}\t{3.5 != 3}")     #equal to and not equal to
+print(f"{2 > 3}\t{3.4 < 5}\t{2.5 >= 0.0005}\t{10 <= 100}")             #greater than, less than, less than equal to, greater than equal to
+#chaining multiple comparison operators
+print(f"{1 < 2 and 2 == '2'}")          # and operator
+print(f"{1 < 2 == '2'}")    ###also possible  'and' 
+print(f"{1 < 2 or 2 == '2'}")           # or operator
+print(f"{not (1 < 2 and 2 == '2')}")    # not operator
+
 
 
 
