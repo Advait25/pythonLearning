@@ -34,7 +34,7 @@ python has 'Dynamic Typing' i.e. -> we can same variable with different datatype
 	x = 2 
 	x = "name"
 type() - to get datatype
--
+
 --------------------
 strings - single quote or double quotes.
 	ordered sequence.
@@ -58,7 +58,8 @@ Lists-	ordered seq that hold different object types
 		we can concatinate lists together	
 		"vIMP - > Lists are Mutable unlike strings"	
 		append and pop
-		sort -  happens in the string , nothing is returned
+		sort -  happens in the list , nothing is returned
+		sorted - a sorted list is returned
 		reverse -  reversing the string
 
 ---------------------
