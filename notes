@@ -126,3 +126,25 @@ Comparison operators
 	to chain multiple comparison operator statements we can use logical operators in python
 	keywords 1) AND 2) OR 3) NOT 
 	-note** 1 < 2 > 0.5 works but logical operators provide more readable code
+
+
+-------------------------
+Python Statements
+	execute a code only when we want to 
+	"*VIMP - >colons and indentation (white space) are very crucial in python statements"
+
+	1) If Else ELIF
+						if condn:
+							block of code
+						elif condn :
+							block of code
+						else (no condn needed) :
+							block of code
+							
+							
+	2) For Loop - to execute a block of code for every iteration if needed
+						for item_variable in iterable object (i.e. iterable) :
+							block of code
+						**you can use below syntax when you don't want to use variable
+								for _ in iterable:
+									block of code

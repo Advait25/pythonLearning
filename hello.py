@@ -198,7 +198,55 @@ print(f"{not (1 < 2 and 2 == '2')}")    # not operator
 
 
 
+#if else statement
+print('\n\n\nIF ELSE ELIF')
+#for example
 
+x = 2
+
+if(x) :
+    print(1)
+elif(x == 2) :                          #since any value of x other than 0 or False is true elif will never execute
+    print(2)
+else :
+    print(0)
+
+
+#For Loops
+print('\n\n\nFOR LOOP')
+#examples
+num = [1,2,3,4,5,6,7,8,9,10]
+#for n in num :
+ #   print(n)
+print('odd and even numbers')
+
+for n in num :
+    if(n%2 != 0):
+        print(f'odd -> {n}')
+    else :
+        print(f'even -> {n}')
+
+print('chars in string')#print string letters
+for letter in 'python':
+    print(letter)
+
+print('tuple unpacking')#tuple unpacking 
+tuplist = [(1,2),(3,4),(5,6)]
+
+for t in tuplist :
+    print(t)
+
+for t,u in tuplist :                 #or for (t,u)
+    print(t)
+    print(u)
+
+print('dictionary')#iterate through dictionary
+d = {'k1':1,'k4':11,'k3':111,'k2':1111}
+for var in d :          #only keys are printed
+    print(var)
+
+for key , value in d.items():  #print key and values
+    print(key,value)
 
 
 
