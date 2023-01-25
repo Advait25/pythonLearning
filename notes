@@ -148,3 +148,7 @@ Python Statements
 						**you can use below syntax when you don't want to use variable
 								for _ in iterable:
 									block of code
+
+
+	3) While Loop -
+						syntax .
