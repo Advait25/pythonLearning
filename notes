@@ -150,7 +150,48 @@ Python Statements
 									block of code
 
 
-	3) While Loop -
+	3) While Loop - execute certain block of code until condn is true
 						syntax .
-						while condition:
-						# body of while loop
+							while condition:
+								# body of while loop
+						can combine while with else to create a control flow
+							while condition:
+								# body of while loop
+							else
+								# code when earlier condition fails
+--------------------------------------------------------------
+'important keywords for loops .
+								1) pass	-  does nothing , but it is great placeholder in loops while creating big code
+								2) break - breaks out of current enclosing loop
+								3) continue - goes to the top of closet enclosing loop
+--------------------------------------------------------------
+
+usefule python operators
+								1)  range() - a 'Generator function' ->  a function which generates data based on requirements at a particular time
+											- it won't return anything directly by calling it i.e range(start,end,step) , range(1,10,2) won't return anything,
+												we have to use it in a loop or cast it to a list to get the data
+												->>"imp - > 'end' parameter is not inlcuded in raneg while 'start' is"
+								2)  enumerate() - to keep track of index count in a list or string
+								3) 	zip() - to zip 2 or more iterable, it returns a 'tuple'
+										  - if the iterables are uneven, zip will stop  once the length of small iterable is passed
+										  - just like range() we have to use it in a loop to get the data, simply calling won't return anything or cast it to a list
+								4) 	in - to check if an object in the iterables( list, string, dictionary( on keys and values( use dict.values() ) ) ) or not , aprt from using it in the loop
+								5) 	min and max -  finding minimum value from list of numbers and maximum respectively
+								6)  random - built-in python library and has lot of functions
+											- syntax for importing python library functions
+												"from random import 'function name'"
+												1) shuffle -  to shuffle a list, does not return anything
+												2) randint -  to get random integer, returns random integer
+								7) input() - taking user input ,
+											- syntax -> input('enter that we want show to user')
+											- "vIMP -  it always accepts anything that is passed by user as a STRING"
+
+--------------------------------------------------------------
+
+List Comprehension - unique easy way to create a list(not actually faster way, it actually takes same amount of time)
+					- >  syntax
+					     list = [var_name1 for var_name in 'string or list or any other iterable']
+								-> var_name1 can be replaced by any arithmatic operation like x+2 or x*x
+								-> also we can add if statements to get a praticular result after the iterable
+
+--------------------------------------------------------------
