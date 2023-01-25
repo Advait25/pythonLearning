@@ -152,3 +152,5 @@ Python Statements
 
 	3) While Loop -
 						syntax .
+						while condition:
+						# body of while loop
