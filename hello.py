@@ -249,4 +249,7 @@ for key , value in d.items():  #print key and values
     print(key,value)
 
 
+#While Loops
+print('\n\n\nWHILE LOOP')
+
 
