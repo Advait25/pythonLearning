@@ -170,7 +170,7 @@ usefule python operators
 								1)  range() - a 'Generator function' ->  a function which generates data based on requirements at a particular time
 											- it won't return anything directly by calling it i.e range(start,end,step) , range(1,10,2) won't return anything,
 												we have to use it in a loop or cast it to a list to get the data
-												->>"imp - > 'end' parameter is not inlcuded in raneg while 'start' is"
+												->>"imp - > 'end' parameter is not inlcuded in raneg while 'start' is and default start value is 0"
 								2)  enumerate() - to keep track of index count in a list or string
 								3) 	zip() - to zip 2 or more iterable, it returns a 'tuple'
 										  - if the iterables are uneven, zip will stop  once the length of small iterable is passed
@@ -193,5 +193,74 @@ List Comprehension - unique easy way to create a list(not actually faster way, i
 					     list = [var_name1 for var_name in 'string or list or any other iterable']
 								-> var_name1 can be replaced by any arithmatic operation like x+2 or x*x
 								-> also we can add if statements to get a praticular result after the iterable
+					-To convert a list to a string, use Python List Comprehension and the join() function. The list comprehension will traverse the elements one by one, 
+						and the join() method will concatenate the list's elements into a new string and return it as output.
+						- > syntax ->> ''.join(listname)
+--------------------------------------------------------------
+
+methods and functions -
+		methods - functions(like pop, append, len, etc) thats are built into objects (list, tuple,dictionary, string, etc)
+				- to get to know different methods
+						1) object. (after . we will see all different methods avaibaleb for the objects)
+						2) use help(method name) to get to know about the method
+
+		Functions - functions allow to create block of code that can be executed multiple times
+				  - 'def' keyword -  to let python know that a function is being written. definition of function
+						- snace casing to be used to write the function name
+						- Docstring - define with """ comment code to write what the function is supposed to do"""
+						- everything inside the function need to be indented inside.
+						- return keyword -
+										 - to send back the result fo the function,
+										 - to assign the output of the function to a variable
+						- syntax
+							def name_of_function(parameter if any):
+								""" Docstring """
+								code to be executed
+
+				  - *args and **kwargs -  these are used pass arbitrary number of parameters to a function
+											-*args  - tuple of objects
+											Syntax
+											'IMP -  args word can be replacced but the * has to be there'
+											**if we print 'args' it will be a tuple
+												def myfunc(*args):
+													func definition
+
+											-**kwargs - dictionary of keyword arguments
+											'IMP -  args word can be replacced but the * has to be there'
+											**if we print 'kwargs' it will be a dictionary of keyword arguments
+												def myfunc(**kwargs):
+													func definition
+---------------------------------------------------------------
+
+Map() function - this function helps to map a function to each object in the given iterable like lis, tuple etc.
+			   - syntax 
+			     - suppose you have function def myfunc(num):
+												return 'even'
+					and a list [2,4,6]
+					then map will go like this ->  map(myfunc, list).
+			   - but we have to iterate through this map function using a loop so that we will get output, otherwise only calling the map function itself does not print anything 
+			   - 'vIMP ->>  map function itself calls the passed function for each object in the iterable, we do not have to call the function while passing it to map function 
+					like -> map(myfunc(),list) is WRONG 
+						 -> map(myfunc,list) is RIGHT '
+
+---------------------------------------------------------------
+
+filter() function - this function gives filter list from given iterable(like list,tuple etc )
+				  - syntax - >  similar to map function
+					filter(myfunc,list)
+				  - 'vIMP ->  passing function has to return boolean value'
 
 --------------------------------------------------------------
+
+lambda expressions 
+					- An anonymous inline function consisting of a single expression which is evaluated when the function is called. 
+						syntax ->>>> lambda [parameters]: expression
+
+---------------------------------------------------------------
+
+Scope - 
+						LEGB rule for Scope	
+						1) Local -  variables declared inside a function (def or lambda) and no declared as global
+						2) Enclosing function locals - variables in local scope of any functions and all functions exclosed inside it, from inner to outer
+						3) Global -  variables at the top of the module or declared globally
+						4) Build-in - variables preassigned in python built-in modules (build in pyhthon keywords)
