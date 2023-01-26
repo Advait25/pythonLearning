@@ -132,6 +132,95 @@ def three_cup_montee():
             break
 
 #game start
-three_cup_montee()
+#three_cup_montee()
+
+
+print('\n*args and **kwargs')
+print('example 1..*args')
+def myfunc(*args):
+    return sum(args)
+#you can pass different number of arguments to this function
+print(f'sum of 10,4.5,3.4.12.34 is {myfunc(10,4.5,3.4,12.34)}')
+print(f'sum of 10,600 is {myfunc(10,600)}')
+
+print('\nexample 2..**kwargs')
+def myfunckw(**kwargs):
+    print(kwargs)
+    if 'fruit' in kwargs:
+        print(f"fruit of choice is {kwargs['fruit']}")
+    else:
+        print(f"drink of choice is {kwargs['soda']}")
+
+#you can pass different number of key word arguments to this function
+myfunckw(fruit='apple',soda='7up')
+
+print('\nexample 3..*args+**kwargs')
+def temp(*args,**kwargs):
+    print(args)
+    print(kwargs)
+    print(f"i would like {args[1]} {kwargs['fruit']}s")
+#vIMP - order of passing parameter should be same, if functions accepts args first then that is how it should be passed or else we will get error
+temp(23,5,3,food='pavbhaji',drink='7up',fruit='apple')  
+
+
+print('\n\nMAP function')
+print('Example 1..get square of a all numbers in given list 1,4,5')
+#squre function
+def get_square(num):
+    return num ** 2
+#list
+num_list = [1,4,5]
+#calling map function
+for item in map(get_square,num_list):
+    print(item)
+
+print('\n\nFILTER function')
+print('Example 1..get all even numbers from given list 1,2,3,4,5')
+#squre function
+def even(num):
+    return num%2 == 0
+#list
+num_list1 = [1,2,3,4,5]
+#calling map function
+for item in filter(even,num_list1):
+    print(item)
+
+print('\n\nLAMBDA expression')
+##converting above 2 problems to lambda expressions
+print('Example 1..get square of a all numbers in given list using lambda expression 1,4,5')
+print(list(map(lambda x : x**2 , num_list)))
+print('Example 2..get all even numbers from given list using lambda expression  1,2,3,4,5')
+print(list(filter(lambda x:x%2 == 0,num_list1)))
+print('Example 3..reverse all strings using lambda expression [He, Likes, Apple] ')
+word = ['He','Likes','Apple']
+print( list(map(lambda s : s[::-1] , word)))
+
+
+print('\n\n\nScope')
+print('1)Local\t2)Enclosing function local\t3)Global\t4)Built-in') 
+print('Example 1..')
+#comment each variable to see how scope works
+#global
+name = 'This is a ScOpE test'
+
+def temp():
+    #Enclosing
+    global name
+    name = 2
+
+    def temp1():
+        #Local
+        #name = True
+
+        print(name)
+    
+    temp1()
+
+temp()
+
+print(f"name = {name}")
+
+
+
 
 
