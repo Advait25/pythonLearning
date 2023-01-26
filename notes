@@ -195,3 +195,25 @@ List Comprehension - unique easy way to create a list(not actually faster way, i
 								-> also we can add if statements to get a praticular result after the iterable
 
 --------------------------------------------------------------
+
+methods and functions -
+		methods - functions(like pop, append, len, etc) thats are built into objects (list, tuple,dictionary, string, etc)
+				- to get to know different methods
+						1) object. (after . we will see all different methods avaibaleb for the objects)
+						2) use help(method name) to get to know about the method
+
+		Functions - functions allow to create block of code that can be executed multiple times
+				  - 'def' keyword -  to let python know that a function is being written. definition of function
+						- snace casing to be used to write the function name
+						- Docstring - define with """ comment code to write what the function is supposed to do"""
+						- everything inside the function need to be indented inside.
+						- return keyword -
+										 - to send back the result fo the function,
+										 - to assign the output of the function to a variable
+						- syntax
+							def name_of_function(parameter if any):
+								""" Docstring """
+								code to be executed
+
+
+---------------------------------------------------------------
