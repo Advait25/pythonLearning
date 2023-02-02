@@ -264,3 +264,33 @@ Scope -
 						2) Enclosing function locals - variables in local scope of any functions and all functions exclosed inside it, from inner to outer
 						3) Global -  variables at the top of the module or declared globally
 						4) Build-in - variables preassigned in python built-in modules (build in pyhthon keywords)
+
+---------------------------------------------------------------
+
+Object Oriented Programming -
+								-creating repeatable organized code
+								- Syntax:
+										-basically with the help of class we can create our user defined objects just like few standard objects available in python list,set,tuple,dictionary etc.
+										-usually we follow camel casing for classes
+										class NameOfClass():
+												-special method __init__ (functions inside a class are referred as methods) ,
+													it is used to create an instance of the object(also referred to as class)
+												-constructor of class
+												-technically self(represents the instance of the object) can be any word, but use self so it would be easy to understand for everyone
+												def __init__(self,param1,param2):
+													self.param1 = param1
+													self.param2 = param2
+
+												-other method can be defined as below
+
+												def some_method(self):
+													#some code
+													print(self.param2)
+
+
+												'imp - >  self keyword here helps to know that this not a random function but a method connected the class'
+
+
+
+													examples of polymorphism : opening different types of files, in which same method like openfile will be use in a different way for each file type
+----------------------------------------------------------------

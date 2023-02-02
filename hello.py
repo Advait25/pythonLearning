@@ -35,7 +35,7 @@ print(string[::])
 print(string[::2])
 print(string[6:7:1])
 #can be use to reverse string
-print(string[::-1])
+print(string[::-1])   #start= string length, stop = 0, step = -1
 
 #string concatination
 print(string[7:]+' '+'pointer')
