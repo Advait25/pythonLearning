@@ -347,3 +347,17 @@ if __name__ == "__main__"  ->> when importing it from module is important to kno
 										----> refer packages and modules/one.py and two.py and run them in cmd directly
 
 --------------------------------------------------------------
+
+Error handling ->  used to catch the errors efefectively and let the program work without failing
+               -  three keywords - 1)try -> this is the block of code which will be attempted for code execution
+			   					   2)except -> block of code to be executed in ca se any error in the try block
+								   3)finally -> final code to be executed regardless of the errors
+
+-----------------------------------------------------------------
+
+pylint  -  library that look into the code and reports back possible issues in the code and styling error
+			-  command - >  pylint <filename> -r y (report yes)
+
+unittest -  buil-in library to perform testing on ypur code  -> refer testingTools/unittest and run test.py
+
+------------------------------------------------------------------
