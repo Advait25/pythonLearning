@@ -294,3 +294,56 @@ Object Oriented Programming -
 
 													examples of polymorphism : opening different types of files, in which same method like openfile will be use in a different way for each file type
 ----------------------------------------------------------------
+
+
+PyPi - 'Python package Index' -> repository for open-source python packages
+	 - pip install <package name> for installing the third party package
+	 - once python is installed in system either through anaconda distribution or from python.org, pip is automatically installed
+	 ((from google -> ' pip stands for "preferred installer program". Python 2.7. 9 and later (on the python2 series), and Python 3.4 and later include pip (pip3 for Python 3) by default.))
+
+    From command prompt example:
+	""""""""""""""""""""""""
+	 ag@ag-vivoBook:~/Documents/python/pythonLearning$ cd ~
+	 ag@ag-vivoBook:~$ pip install requests
+	 bash: /usr/local/bin/pip: /usr/bin/python: bad interpreter: No such file or directory
+	 ag@ag-vivoBook:~$ pip3 install requests
+	 Defaulting to user installation because normal site-packages is not writeable
+	 Requirement already satisfied: requests in ./.local/lib/python3.10/site-packages (2.28.1)
+	 Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests) (2020.6.20)
+	 Requirement already satisfied: charset-normalizer<3,>=2 in ./.local/lib/python3.10/site-packages (from requests) (2.1.1)
+	 Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/lib/python3/dist-packages (from requests) (1.26.5)
+	 Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests) (3.3)
+	 ag@ag-vivoBook:~$ pip3 install colorama
+	 Defaulting to user installation because normal site-packages is not writeable
+	 Requirement already satisfied: colorama in /usr/lib/python3/dist-packages (0.4.4)
+	 ag@ag-vivoBook:~$ python3
+	 Python 3.10.6 (main, Nov 14 2022, 16:10:14) [GCC 11.3.0] on linux
+	 Type "help", "copyright", "credits" or "license" for more information.
+	 >>> from colorama import init
+	 >>> init()
+	 >>> from colorama import Fore
+	 >>> print(Fore.Red+"Red Text")
+	 Traceback (most recent call last):
+	   File "<stdin>", line 1, in <module>
+	 AttributeError: 'AnsiFore' object has no attribute 'Red'. Did you mean: 'RED'?
+	 >>> print(Fore.RED+"Red Text")
+	 Red Text
+	 >>> 
+
+	 """""""""""""""""""""""""""""""""""""""""""
+---------------------------------------------------------------
+modules and packages - modules->  a python script(.py) which can be called from another python script
+						  - packages-> collection of modules
+						             - a mandatoryb __init__.py should be inside the package folder and its subfolder, it helps python to know that this is not some random folder but a pakcage
+	 
+---------------------------------------------------------------
+
+if __name__ == "__main__"  ->> when importing it from module is important to know for a file whether we have imported the only function or the whole .py file
+
+	-since there is no special main function in python there is no way to know where the program starts.
+	-  build int variable -> __name__   -> when runnning the scirpt directly , python assigns "__main__" to the __name__variable
+										->  hence this check is used to check whether we are running an imported fucntion from file or the whole file .
+
+										----> refer packages and modules/one.py and two.py and run them in cmd directly
+
+--------------------------------------------------------------
