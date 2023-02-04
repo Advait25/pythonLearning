@@ -28,7 +28,7 @@ class Card:
 
 
 #test
-clubsTwo = Card('Clubs', 'Two')
+#clubsTwo = Card('Clubs', 'Two')
 #print(clubsTwo)
 
 
