@@ -182,12 +182,12 @@ def player_wins(player,dealer,Chips):
 #dealer busts
 def dealer_busts(player,dealer,Chips):
     print('dealer busted!!!')
-    Chips.lose_bet()
+    Chips.win_bet()
 
 #dealer wins
 def dealer_wins(player,dealer,Chips):
     print('delaer wins!!!')
-    Chips.win_bet()
+    Chips.lose_bet()
 
 #push
 def push(player,dealer):
