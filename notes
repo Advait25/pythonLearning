@@ -372,3 +372,18 @@ Python Decorators - helps to track the additional functionality to an already ex
 				  - used with web framwork like Django or Flask
 
 -------------------------------------------------------------------
+
+Generators - generators are special functions in python which return some value at some point in their functionality and 
+			then it wait until the next value is asked , without breaking or exitting.
+		   - so basiccally they are generating a set of values which can be iterated over using some loop functionality
+		   - 'yield' keyword is used in these function
+		   - Example -> range() function 
+
+			- next() ->  helps to get the next value in a sequence, it takes parameter 'iterable' in which we want get the next value
+				- next function with throw 'StopIteration' error once end of sequence is reached, it doesn't handle the error, 
+				- for loop on the other hand has ability to handle that exception 
+			- iter() -> helps to iterate thorugh the object, gets the parameter of the object you want to  converts into a 'iterable' through which we can iterate
+			
+			(next and iter are mostly called behind the code a lot, like next in generator functions)
+
+------------------------------------------------------------------
