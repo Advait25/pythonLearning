@@ -146,25 +146,25 @@ def hit_or_stand(Deck,Hand):
 def show_some(player, dealer):
 
     #dealer's one ccard will be hidden and other will be shown
-    print("\n Dealer's Cards: ")
+    print("\nDealer's Cards: ")
     print('<First card is hidden>')
     print(f'Second card is : {dealer.cards[1]}')
 
     #all of players cards (2) will be shown
-    print("\n Player's Cards: ")
-    print('\nPlayer cards',*player.cards,sep = '\n')
+    print("\nPlayer's Cards: ")
+    print('',*player.cards,sep = '\n')
 
 #show some
 def show_all(player, dealer):
 
     #all of delaers cards (2) will be shown
-    print("\n Dealer's Cards: ")
-    print('\Dealers cards',*player.cards,sep = '\n')
+    print("\nDealer's Cards: ")
+    print('',*dealer.cards,sep = '\n')
     print(f"Dealer's Total - {dealer.value}")
 
     #all of players cards (2) will be shown
-    print("\n Player's Cards: ")
-    print('\nPlayer cards',*player.cards,sep = '\n')
+    print("\nPlayer's Cards: ")
+    print('',*player.cards,sep = '\n')
     print(f"Player's Total - {player.value}")
 
 
