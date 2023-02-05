@@ -361,3 +361,14 @@ pylint  -  library that look into the code and reports back possible issues in t
 unittest -  buil-in library to perform testing on ypur code  -> refer testingTools/unittest and run test.py
 
 ------------------------------------------------------------------
+
+Python Decorators - helps to track the additional functionality to an already existing function
+				  - '@' operator is used to represents this
+				  - syntax -
+							@some_decorator			#decorator
+							def some_func():		#existing function
+								#code
+
+				  - used with web framwork like Django or Flask
+
+-------------------------------------------------------------------
