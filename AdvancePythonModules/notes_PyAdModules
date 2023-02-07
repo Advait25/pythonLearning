@@ -2,3 +2,8 @@ Collections -> built-in datatype in base python
 			- implements specialized container datatypes
 				- using python's specialized containers in a special, more effective way
 					- when we say built-in python containers, it refers to dictionary,tuples etc datatypes
+--------------------------------------
+
+Shutil and OS -> allows to easily navigate to any file/s in the computer and to peform different actions on it
+
+--------------------------------------
