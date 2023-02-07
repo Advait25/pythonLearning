@@ -7,3 +7,7 @@ Collections -> built-in datatype in base python
 Shutil and OS -> allows to easily navigate to any file/s in the computer and to peform different actions on it
 
 --------------------------------------
+
+Datetime - > this modules helps to create objects which have information on various aspects such as date time etc as well as timezones and perform opartions
+
+-------------------------------------
