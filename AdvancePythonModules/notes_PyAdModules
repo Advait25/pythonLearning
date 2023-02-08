@@ -10,4 +10,9 @@ Shutil and OS -> allows to easily navigate to any file/s in the computer and to 
 
 Datetime - > this modules helps to create objects which have information on various aspects such as date time etc as well as timezones and perform opartions
 
--------------------------------------
+--------------------------------------
+
+Math and Random -> Math module contain different function to help do the mathematical tasks and
+				-> Random module hold different function to get any random number or to shuffle the python objects
+
+--------------------------------------
