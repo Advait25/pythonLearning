@@ -24,3 +24,33 @@ Python debugger -> a built - in python tool to help understand the variables, mi
 					- best replacement for the original tool for debugging i.e. print statements :)
 
 -------------------------------------
+
+Regular Expressions(regex) -> regular expressions helps to find a general pattern in the given set of data
+							- python library for regular expression is -> re
+						   -> understanding the regex syntax is very important
+						   -> example 1. find all the phone numbers in the given large file.
+								1. Defind/understand general syntax of phone numbers for Ex -> (987)-398-9867
+								2. start creating the regex patters -> r"(\d\d\d)-\d\d\d-\d\d\d\d"
+									a. r" ->  helps to let python know that this not just a string but a REGEX
+									b. \d -> general identifiers , here it is looking for digits
+									c. (,),- -> the are some strings chars that we, for sure, know that it would be there
+								3. It can also be written in a complex and more compact way using quantifiers -> r"(\d{3})-\d{3}-\d{4}"
+
+						   -> important character identifiers:
+								\d = A digit
+								\w = An alphanumeric
+								\s = white space
+								\D = Non-digit
+								\W = Non-alphanumeric
+								\S = Non-whitespaces
+
+						   -> important quantifiers:
+								+ = occurs one or more time
+								{3} = occurs a specific 3 time
+								{3,4} = occurs 3 or 4 times
+								{3,} = occurs 3 or more times
+								* = occurs zero or more times
+								? = once or more
+
+
+-------------------------------------
