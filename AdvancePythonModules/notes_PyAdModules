@@ -54,3 +54,17 @@ Regular Expressions(regex) -> regular expressions helps to find a general patter
 
 
 -------------------------------------
+
+Timing the code -> by timing code we can identify the code's performance, which will in turn help us to identify the best and efficient solution
+
+timeit -> for some code the elapsed time is so small that its impossible to compare
+			so this module helps to decide which code is efficient by running the code over and over again to get comparable results
+			-> it has 3 parts
+				1. statement -> statement you want to run repetatively
+				2. setup ->  code base for the statement
+				3. number -> number of times we want to run the code
+			-> for jupyter notebook -> a special syntax -> %%timeit
+															and on next line the statement, it doesn't require setup as it find it from the cells above
+														-> by default it runs 100000 times
+
+------------------------------------
