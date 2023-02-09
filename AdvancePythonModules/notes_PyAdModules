@@ -1,0 +1,74 @@
+Collections -> built-in datatype in base python
+			- implements specialized container datatypes
+				- using python's specialized containers in a special, more effective way
+					- when we say built-in python containers, it refers to dictionary,tuples etc datatypes
+--------------------------------------
+
+Shutil and OS -> allows to easily navigate to any file/s in the computer and to peform different actions on it
+
+--------------------------------------
+
+Datetime - > this modules helps to create objects which have information on various aspects such as date time etc as well as timezones and perform opartions
+
+--------------------------------------
+
+Math and Random -> Math module contain different function to help do the mathematical tasks and
+				-> Random module hold different function to get any random number or to shuffle the python objects
+
+--------------------------------------
+
+Python debugger -> a built - in python tool to help understand the variables, mid-operation of the code
+					- we can set trace at certain point where we think the error is and then start exploring the variable and there details
+					- we get an interactive tool in which we can enter varibale and do operation to get the bottom of error
+					- it is like setting a breakpoint in the code
+					- best replacement for the original tool for debugging i.e. print statements :)
+
+-------------------------------------
+
+Regular Expressions(regex) -> regular expressions helps to find a general pattern in the given set of data
+							- python library for regular expression is -> re
+						   -> understanding the regex syntax is very important
+						   -> example 1. find all the phone numbers in the given large file.
+								1. Defind/understand general syntax of phone numbers for Ex -> (987)-398-9867
+								2. start creating the regex patters -> r"(\d\d\d)-\d\d\d-\d\d\d\d"
+									a. r" ->  helps to let python know that this not just a string but a REGEX
+									b. \d -> general identifiers , here it is looking for digits
+									c. (,),- -> the are some strings chars that we, for sure, know that it would be there
+								3. It can also be written in a complex and more compact way using quantifiers -> r"(\d{3})-\d{3}-\d{4}"
+
+						   -> important character identifiers:
+								\d = A digit
+								\w = An alphanumeric
+								\s = white space
+								\D = Non-digit
+								\W = Non-alphanumeric
+								\S = Non-whitespaces
+
+						   -> important quantifiers:
+								+ = occurs one or more time
+								{3} = occurs a specific 3 time
+								{3,4} = occurs 3 or 4 times
+								{3,} = occurs 3 or more times
+								* = occurs zero or more times
+								? = once or more
+
+
+-------------------------------------
+
+Timing the code -> by timing code we can identify the code's performance, which will in turn help us to identify the best and efficient solution
+
+timeit -> for some code the elapsed time is so small that its impossible to compare
+			so this module helps to decide which code is efficient by running the code over and over again to get comparable results
+			-> it has 3 parts
+				1. statement -> statement you want to run repetatively
+				2. setup ->  code base for the statement
+				3. number -> number of times we want to run the code
+			-> for jupyter notebook -> a special syntax -> %%timeit
+															and on next line the statement, it doesn't require setup as it find it from the cells above
+														-> by default it runs 100000 times
+
+------------------------------------
+
+zipfile -> for zipping and unzipping the file
+
+-----------------------------------
