@@ -4,33 +4,35 @@ import zipfile
 import os
 import pdb
 
-path = '/home/ag/Documents/python/pythonLearning/AdvancePythonModules/zipit/'
+#change working directory here at the top
+#this will fix the bug ->  the zip file creation was gettnig created with the whole path structure, resulting in similar structure while extracting
+os.chdir('/home/ag/Documents/python/pythonLearning/AdvancePythonModules/zipit/')
 
+path = os.getcwd()
 
 #creating files
-f =  open(path+'file_one.txt','w+')
+f =  open('file_one.txt','w+')
 f.write('File ONE')
 f.close()
 
-f =  open(path+'file_two.txt','w+')
+f =  open('file_two.txt','w+')
 f.write('File TWO')
 f.close()
 
 #create compress file object
-comp_file = zipfile.ZipFile(path+'comp_file.zip','w')
+comp_file = zipfile.ZipFile('comp_file.zip','w')
 
 #add the files  ,that need to be compressed, to comp_file object 
 #refer os module for below code ->  shutil_and OS.py
 
 for folder,subfolder,files in os.walk(path):
     for f in files:
-        full_filename = path + f
-        comp_file.write(full_filename,compress_type=zipfile.ZIP_DEFLATED)
+        if '.txt' in f:
+            comp_file.write(f,compress_type=zipfile.ZIP_DEFLATED)
 
 comp_file.close()
 #extract the zipped file
-extract_obj = zipfile.ZipFile(path+'comp_file.zip','r')
+extract_obj = zipfile.ZipFile('comp_file.zip','r')
 #extract_obj.extract('file_one.txt')    -> to extract individual file
-
-extract_obj.extractall('extracted_content')    #to extract all
+extract_obj.extractall('extracted')    #to extract all
 
