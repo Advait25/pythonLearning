@@ -1,0 +1,27 @@
+Web Scraping -> general term for technique involving automating the gathering of data from a website
+
+Rules of Web Scraping -> 1)Always try to get permission or try to understand the law in a particular country
+                        before performing scraping. Usually it is not a problem but it good to take care.
+                         2)IF you make too many scraping attempts, your ip address could get blocked
+                         3)Some site automatically block the scraping software
+
+
+Limitation of Web Scraping -> 1)Each website requires a unique scraping script becasue the each website is unique.
+                            2) so in case any website gets changed , the whole scraping script needs to be changed
+
+
+
+python can view the HTML and CSS elements of the websites programatically and the extract information from it
+
+imp libraries for web scraping: 
+
+1)request -> cmd  --> pip install requests  -> helps to get page source, but its difficult to read as its a string version
+2)lxml -> cmd  --> pip install lxml
+3)bs4 -> cmd  --> pip install bs4           (beautiful soup 4) -> helps to  grab html tags from string version and thereby information from the page sourcce
+
+soup.select types
+1)soup.select('div')  -> all elements with 'div tag'
+2)soup.select('#id')  -> elements containing id='id'
+3)soup.select('.class')  -> elements containing class='class'
+4)soup.select('div span')  -> any element named span within a div element
+5)soup.select('div > span') -> any element named span 'directly' within a div element, with nothing in between
