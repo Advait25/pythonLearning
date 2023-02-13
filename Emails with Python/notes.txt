@@ -1,0 +1,11 @@
+smtplib -> this is the python library for working with emails 
+
+these are the few steps we have to follow in order to work with emails
+->1) connecting to an email server
+->2) confirming the connection
+->3) setting a protocol
+->5) logging on
+
+imaplib and email libraries can be used to check the email you received 
+-> imaplib -> this library helps to search in email inbox usingspecial search syntax
+
