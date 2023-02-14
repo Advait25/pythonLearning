@@ -35,7 +35,7 @@ print(string[::])
 print(string[::2])
 print(string[6:7:1])
 #can be use to reverse string
-print(string[::-1])
+print(string[::-1])   #start= string length, stop = 0, step = -1
 
 #string concatination
 print(string[7:]+' '+'pointer')
@@ -251,5 +251,104 @@ for key , value in d.items():  #print key and values
 
 #While Loops
 print('\n\n\nWHILE LOOP')
+#example
+x=0
+while(x <= 12) :
+    print(x)
+    x+=2
+else :
+    print('x > 12')
 
 
+
+#important keywords in loops
+print('\niIMPORTANT KEYWORDS IN LOOPS')
+
+#keyword Pass
+while(x==12) :
+    pass
+print('\nusing "pass" keyword')
+
+y=0
+#keyword continue
+print('\n"continue" keyword...do not print 6')
+while(y <= 12):
+    if(y == 6):
+        y+=3
+        continue
+    print(y)
+    y+=3
+
+#keyword Break
+print('\n"break" keyword...do not print last letter of string AdvaitG')
+name = 'AdvaitG'
+for c in name:
+    if(c == 'G'):
+        break
+    print(c)
+
+
+#useful python operators and functions
+print('\nUSEFUL PYTHON OPERATORS')
+#range()
+print('\n1)using range() to print 0 to 10 with step = 3')
+for num in range(0,10,3):
+    print(num)
+
+#enumerate()
+print('2)using enumerate()..print letter with index position of string "abcde"')
+for item in enumerate('abcde'):        #use tuple unpacking if only letter to be printed as item is giving a tuple with (index, letter)
+    print(item)
+
+#zip()
+print('3)using zip() to zip below lists together')
+a = [1,2,3]
+b = ['x','y','z']
+for item in zip(a,b):
+    print(item)
+#or
+print(f'OR directly using print {list(zip(a,b))}')
+print(f'printing alphabets pairs {list(zip("abcde","zyxwvut"))}')
+
+#in keyword
+print('4)in keyword')
+print(f"{'x' in [1,2,3,4]}, x is not in the 1,2,3,4")
+print(f"{1 in [1,2,3,4]}, 1 is in 1,2,3,4,5")
+print(f'{"x" in "key"}, x is not in string "key"')
+print(f"{'x' in {'x':2}}, y is in dictionary")
+
+# min max
+print('5)min max function\nprint min and max value from .....10,20,40,80,100')
+print(min([10,20,40,80,100]))
+print(max([10,20,40,80,100]))
+
+#'random' library
+print('6)"random" library\nshuffle the list [1,2,3,4] and get a random integer')
+from random import shuffle , randint
+print(f'shuffle  - {shuffle([1,2,3,4])} \nrandint {randint(0, 20)}')
+
+#input() function
+print('7)input() function')
+#input('enter a name')
+#print(f"input is always a string -> {type(input('enter a number'))}")
+
+#list Comprehension
+print('\n\n\nLIST COMPREHENSION')
+print("1)get list of all letters in string 'python'")
+listpy = [x for x in 'python']
+print(listpy)
+print("2)create squared list of 1,4,6,2")
+listsq = [x ** 2 for x in [1,4,6,2]]
+print(listsq)
+print("3)create list of odd numbers of 0 to 50")
+listev = [x for x in range(0,50) if x%2!=0]
+print(listev)
+print('4)convert fahrenheit temperature to celcius [32,212,104]')
+listce = [((x-32)*5/9) for x in [32,212,104]]
+print(listce)
+print("5)if else -> create list of odd and even numbers of 0 to 50")
+listevod = [x if (x%2!=0) else 'even' for x in range(0,10) ]
+print(listevod)
+print("5)nested loops -> create list of product of 2 lists")
+listlstproduct = [x*y for x in range(1,4) for y in range(10,30,10)]
+print(listlstproduct)

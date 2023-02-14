@@ -1,0 +1,27 @@
+CSV -> Comma Separated Variables  -> contains raw data from spreadsheet
+
+python has built in CSV module to work with .csv files
+
+some other important python libraries to work with files
+
+pandas -> very popular library for data analysis
+       -> huge library containing lots data analysis fubnctionalities
+
+openpyxl -> designed specifically for excel 
+         -> contains excel formulas and other excel related functionalities
+
+google sheets python api  -> a direct access to python interface for working with google spreadsheet
+                          -> allows to make changes to spreadsheets hosted online
+                          -> drawback is it has very complex syntax
+
+
+pdf - Portable Document Format, developed by Adobe in 1990
+
+since pdf files have no specifix format like csv files they are very difficult to read.
+We can use below specialized open source python library for pdf
+PyPDF2 -> PyPDF2 is a free and open-source pure-python PDF library capable of splitting, merging, cropping, and transforming the pages of PDF files. 
+       -> It can also add custom data, viewing options, and passwords to PDF files. 
+       -> PyPDF2 can retrieve text and metadata from PDFs as well.
+       -> command to install ->  pip install PyPDF2
+
+    IMP -> PyPDF2 may not be able to work with pdf files, sometimes it may return some empty sets of data even though there is data in pdf or it may show wrong number for total pages in pdf

@@ -150,7 +150,240 @@ Python Statements
 									block of code
 
 
-	3) While Loop -
+	3) While Loop - execute certain block of code until condn is true
 						syntax .
-						while condition:
-						# body of while loop
+							while condition:
+								# body of while loop
+						can combine while with else to create a control flow
+							while condition:
+								# body of while loop
+							else
+								# code when earlier condition fails
+--------------------------------------------------------------
+'important keywords for loops .
+								1) pass	-  does nothing , but it is great placeholder in loops while creating big code
+								2) break - breaks out of current enclosing loop
+								3) continue - goes to the top of closet enclosing loop
+--------------------------------------------------------------
+
+usefule python operators
+								1)  range() - a 'Generator function' ->  a function which generates data based on requirements at a particular time
+											- it won't return anything directly by calling it i.e range(start,end,step) , range(1,10,2) won't return anything,
+												we have to use it in a loop or cast it to a list to get the data
+												->>"imp - > 'end' parameter is not inlcuded in raneg while 'start' is and default start value is 0"
+								2)  enumerate() - to keep track of index count in a list or string
+								3) 	zip() - to zip 2 or more iterable, it returns a 'tuple'
+										  - if the iterables are uneven, zip will stop  once the length of small iterable is passed
+										  - just like range() we have to use it in a loop to get the data, simply calling won't return anything or cast it to a list
+								4) 	in - to check if an object in the iterables( list, string, dictionary( on keys and values( use dict.values() ) ) ) or not , aprt from using it in the loop
+								5) 	min and max -  finding minimum value from list of numbers and maximum respectively
+								6)  random - built-in python library and has lot of functions
+											- syntax for importing python library functions
+												"from random import 'function name'"
+												1) shuffle -  to shuffle a list, does not return anything
+												2) randint -  to get random integer, returns random integer
+								7) input() - taking user input ,
+											- syntax -> input('enter that we want show to user')
+											- "vIMP -  it always accepts anything that is passed by user as a STRING"
+
+--------------------------------------------------------------
+
+List Comprehension - unique easy way to create a list(not actually faster way, it actually takes same amount of time)
+					- >  syntax
+					     list = [var_name1 for var_name in 'string or list or any other iterable']
+								-> var_name1 can be replaced by any arithmatic operation like x+2 or x*x
+								-> also we can add if statements to get a praticular result after the iterable
+					-To convert a list to a string, use Python List Comprehension and the join() function. The list comprehension will traverse the elements one by one, 
+						and the join() method will concatenate the list's elements into a new string and return it as output.
+						- > syntax ->> ''.join(listname)
+--------------------------------------------------------------
+
+methods and functions -
+		methods - functions(like pop, append, len, etc) thats are built into objects (list, tuple,dictionary, string, etc)
+				- to get to know different methods
+						1) object. (after . we will see all different methods avaibaleb for the objects)
+						2) use help(method name) to get to know about the method
+
+		Functions - functions allow to create block of code that can be executed multiple times
+				  - 'def' keyword -  to let python know that a function is being written. definition of function
+						- snace casing to be used to write the function name
+						- Docstring - define with """ comment code to write what the function is supposed to do"""
+						- everything inside the function need to be indented inside.
+						- return keyword -
+										 - to send back the result fo the function,
+										 - to assign the output of the function to a variable
+						- syntax
+							def name_of_function(parameter if any):
+								""" Docstring """
+								code to be executed
+
+				  - *args and **kwargs -  these are used pass arbitrary number of parameters to a function
+											-*args  - tuple of objects
+											Syntax
+											'IMP -  args word can be replacced but the * has to be there'
+											**if we print 'args' it will be a tuple
+												def myfunc(*args):
+													func definition
+
+											-**kwargs - dictionary of keyword arguments
+											'IMP -  args word can be replacced but the * has to be there'
+											**if we print 'kwargs' it will be a dictionary of keyword arguments
+												def myfunc(**kwargs):
+													func definition
+---------------------------------------------------------------
+
+Map() function - this function helps to map a function to each object in the given iterable like lis, tuple etc.
+			   - syntax 
+			     - suppose you have function def myfunc(num):
+												return 'even'
+					and a list [2,4,6]
+					then map will go like this ->  map(myfunc, list).
+			   - but we have to iterate through this map function using a loop so that we will get output, otherwise only calling the map function itself does not print anything 
+			   - 'vIMP ->>  map function itself calls the passed function for each object in the iterable, we do not have to call the function while passing it to map function 
+					like -> map(myfunc(),list) is WRONG 
+						 -> map(myfunc,list) is RIGHT '
+
+---------------------------------------------------------------
+
+filter() function - this function gives filter list from given iterable(like list,tuple etc )
+				  - syntax - >  similar to map function
+					filter(myfunc,list)
+				  - 'vIMP ->  passing function has to return boolean value'
+
+--------------------------------------------------------------
+
+lambda expressions 
+					- An anonymous inline function consisting of a single expression which is evaluated when the function is called. 
+						syntax ->>>> lambda [parameters]: expression
+
+---------------------------------------------------------------
+
+Scope - 
+						LEGB rule for Scope	
+						1) Local -  variables declared inside a function (def or lambda) and no declared as global
+						2) Enclosing function locals - variables in local scope of any functions and all functions exclosed inside it, from inner to outer
+						3) Global -  variables at the top of the module or declared globally
+						4) Build-in - variables preassigned in python built-in modules (build in pyhthon keywords)
+
+---------------------------------------------------------------
+
+Object Oriented Programming -
+								-creating repeatable organized code
+								- Syntax:
+										-basically with the help of class we can create our user defined objects just like few standard objects available in python list,set,tuple,dictionary etc.
+										-usually we follow camel casing for classes
+										class NameOfClass():
+												-special method __init__ (functions inside a class are referred as methods) ,
+													it is used to create an instance of the object(also referred to as class)
+												-constructor of class
+												-technically self(represents the instance of the object) can be any word, but use self so it would be easy to understand for everyone
+												def __init__(self,param1,param2):
+													self.param1 = param1
+													self.param2 = param2
+
+												-other method can be defined as below
+
+												def some_method(self):
+													#some code
+													print(self.param2)
+
+
+												'imp - >  self keyword here helps to know that this not a random function but a method connected the class'
+
+
+
+													examples of polymorphism : opening different types of files, in which same method like openfile will be use in a different way for each file type
+----------------------------------------------------------------
+
+
+PyPi - 'Python package Index' -> repository for open-source python packages
+	 - pip install <package name> for installing the third party package
+	 - once python is installed in system either through anaconda distribution or from python.org, pip is automatically installed
+	 ((from google -> ' pip stands for "preferred installer program". Python 2.7. 9 and later (on the python2 series), and Python 3.4 and later include pip (pip3 for Python 3) by default.))
+
+    From command prompt example:
+	""""""""""""""""""""""""
+	 ag@ag-vivoBook:~/Documents/python/pythonLearning$ cd ~
+	 ag@ag-vivoBook:~$ pip install requests
+	 bash: /usr/local/bin/pip: /usr/bin/python: bad interpreter: No such file or directory
+	 ag@ag-vivoBook:~$ pip3 install requests
+	 Defaulting to user installation because normal site-packages is not writeable
+	 Requirement already satisfied: requests in ./.local/lib/python3.10/site-packages (2.28.1)
+	 Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests) (2020.6.20)
+	 Requirement already satisfied: charset-normalizer<3,>=2 in ./.local/lib/python3.10/site-packages (from requests) (2.1.1)
+	 Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/lib/python3/dist-packages (from requests) (1.26.5)
+	 Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests) (3.3)
+	 ag@ag-vivoBook:~$ pip3 install colorama
+	 Defaulting to user installation because normal site-packages is not writeable
+	 Requirement already satisfied: colorama in /usr/lib/python3/dist-packages (0.4.4)
+	 ag@ag-vivoBook:~$ python3
+	 Python 3.10.6 (main, Nov 14 2022, 16:10:14) [GCC 11.3.0] on linux
+	 Type "help", "copyright", "credits" or "license" for more information.
+	 >>> from colorama import init
+	 >>> init()
+	 >>> from colorama import Fore
+	 >>> print(Fore.Red+"Red Text")
+	 Traceback (most recent call last):
+	   File "<stdin>", line 1, in <module>
+	 AttributeError: 'AnsiFore' object has no attribute 'Red'. Did you mean: 'RED'?
+	 >>> print(Fore.RED+"Red Text")
+	 Red Text
+	 >>> 
+
+	 """""""""""""""""""""""""""""""""""""""""""
+---------------------------------------------------------------
+modules and packages - modules->  a python script(.py) which can be called from another python script
+						  - packages-> collection of modules
+						             - a mandatoryb __init__.py should be inside the package folder and its subfolder, it helps python to know that this is not some random folder but a pakcage
+	 
+---------------------------------------------------------------
+
+if __name__ == "__main__"  ->> when importing it from module is important to know for a file whether we have imported the only function or the whole .py file
+
+	-since there is no special main function in python there is no way to know where the program starts.
+	-  build int variable -> __name__   -> when runnning the scirpt directly , python assigns "__main__" to the __name__variable
+										->  hence this check is used to check whether we are running an imported fucntion from file or the whole file .
+
+										----> refer packages and modules/one.py and two.py and run them in cmd directly
+
+--------------------------------------------------------------
+
+Error handling ->  used to catch the errors efefectively and let the program work without failing
+               -  three keywords - 1)try -> this is the block of code which will be attempted for code execution
+			   					   2)except -> block of code to be executed in ca se any error in the try block
+								   3)finally -> final code to be executed regardless of the errors
+
+-----------------------------------------------------------------
+
+pylint  -  library that look into the code and reports back possible issues in the code and styling error
+			-  command - >  pylint <filename> -r y (report yes)
+
+unittest -  buil-in library to perform testing on ypur code  -> refer testingTools/unittest and run test.py
+
+------------------------------------------------------------------
+
+Python Decorators - helps to track the additional functionality to an already existing function
+				  - '@' operator is used to represents this
+				  - syntax -
+							@some_decorator			#decorator
+							def some_func():		#existing function
+								#code
+
+				  - used with web framwork like Django or Flask
+
+-------------------------------------------------------------------
+
+Generators - generators are special functions in python which return some value at some point in their functionality and 
+			then it wait until the next value is asked , without breaking or exitting.
+		   - so basiccally they are generating a set of values which can be iterated over using some loop functionality
+		   - 'yield' keyword is used in these function
+		   - Example -> range() function 
+
+			- next() ->  helps to get the next value in a sequence, it takes parameter 'iterable' in which we want get the next value
+				- next function with throw 'StopIteration' error once end of sequence is reached, it doesn't handle the error, 
+				- for loop on the other hand has ability to handle that exception 
+			- iter() -> helps to iterate thorugh the object, gets the parameter of the object you want to  converts into a 'iterable' through which we can iterate
+			
+			(next and iter are mostly called behind the code a lot, like next in generator functions)
+
+------------------------------------------------------------------
